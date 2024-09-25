@@ -60,7 +60,7 @@ Bài tập:
      + Ít nhất 3 đoạn văn về kỹ năng, kinh nghiệm và dự án, sử dụng các thẻ p, strong, em, span
      + Kết thúc bằng một câu kêu gọi hành động (ví dụ: "Hãy liên hệ với tôi") sử dụng strong
 
-#### Buổi 2: Các thẻ cơ bản và liên kết
+#### Buổi 2: Các thẻ cơ bản, liên kết và Semantic HTML
 1. Thẻ liên kết: `<a>`
    - Cú pháp và thuộc tính cơ bản: href, target, rel
    - Liên kết nội bộ và liên kết ngoài
@@ -77,33 +77,59 @@ Bài tập:
    - Danh sách lồng nhau
    - Tùy chỉnh kiểu dáng danh sách với CSS
 
-4. Thẻ phân chia: `<div>`, `<section>`, `<article>`, `<aside>`, `<header>`, `<footer>`
-   - Vai trò và cách sử dụng của từng thẻ
-   - So sánh giữa các thẻ phân chia
-   - Cấu trúc trang web chuẩn với các thẻ semantic
+4. Thẻ phân chia và Semantic HTML:
+   - `<div>`: Phân chia chung, không mang ý nghĩa ngữ cảnh
+   - `<header>`: Đánh dấu phần đầu của trang hoặc một phần nội dung
+   - `<nav>`: Chứa các liên kết điều hướng chính
+   - `<main>`: Bao bọc nội dung chính của trang
+   - `<section>`: Nhóm các nội dung có liên quan với nhau
+   - `<article>`: Đánh dấu một nội dung độc lập, có thể tái sử dụng
+   - `<aside>`: Chứa thông tin phụ, liên quan đến nội dung xung quanh
+   - `<footer>`: Đánh dấu phần cuối của trang hoặc một phần nội dung
+
+5. Tại sao sử dụng semantic HTML và lợi ích của nó:
+   - Cải thiện khả năng đọc và bảo trì code
+   - Tăng cường khả năng tiếp cận (accessibility) cho người dùng sử dụng công nghệ hỗ trợ
+   - Hỗ trợ SEO bằng cách giúp các công cụ tìm kiếm hiểu rõ hơn về cấu trúc và nội dung của trang
+   - Cải thiện trải nghiệm người dùng trên các thiết bị khác nhau
+
+6. Các thẻ semantic khác:
+   - `<figure>` và `<figcaption>`: Đánh dấu hình ảnh và chú thích
+   - `<time>`: Đánh dấu thông tin về thời gian
+   - `<mark>`: Đánh dấu văn bản được nhấn mạnh
 
 Bài tập thực hành:
 
 1. Tiếp tục phát triển trang Portfolio cá nhân:
    - Sử dụng `<header>` cho phần đầu trang với tên và ảnh đại diện
    - Tạo menu navigation với `<nav>` và danh sách liên kết đến các phần của trang
-   - Sử dụng `<section>` cho các phần: Giới thiệu, Kỹ năng, Dự án
-   - Thêm hình ảnh minh họa cho mỗi dự án trong phần Dự án
+   - Sử dụng `<main>` bao quanh nội dung chính của trang
+   - Áp dụng `<section>` cho các phần: Giới thiệu, Kỹ năng, Dự án
+   - Thêm hình ảnh minh họa cho mỗi dự án trong phần Dự án, sử dụng `<figure>` và `<figcaption>`
+   - Sử dụng `<article>` cho mỗi dự án trong danh sách
+   - Dùng `<aside>` cho phần thông tin liên hệ hoặc các liên kết mạng xã hội
    - Sử dụng `<footer>` cho thông tin liên hệ và liên kết mạng xã hội
 
 2. Mở rộng trang chủ Shopee:
    - Tạo `<header>` với logo Shopee và menu navigation chính
-   - Sử dụng `<section>` cho các phần chính: Banner quảng cáo, Danh mục sản phẩm, Flash Sale
-   - Trong phần Danh mục sản phẩm, sử dụng `<article>` cho mỗi danh mục
+   - Áp dụng `<nav>` cho menu điều hướng chính
+   - Sử dụng `<main>` bao quanh phần nội dung chính của trang
+   - Áp dụng `<section>` cho các phần chính: Banner quảng cáo, Danh mục sản phẩm, Flash Sale
+   - Trong phần Danh mục sản phẩm, sử dụng `<article>` cho mỗi danh mục và sản phẩm
    - Thêm `<aside>` cho phần sidebar với các bộ lọc sản phẩm
    - Sử dụng danh sách để liệt kê các sản phẩm nổi bật
+   - Áp dụng `<footer>` cho phần cuối trang
 
 3. Phát triển giao diện chính của ChatGPT:
-   - Tạo grid layout với `<section>` cho khu vực chat chính
+   - Áp dụng `<header>` cho phần đầu trang chứa logo và menu người dùng
+   - Sử dụng `<nav>` cho menu lịch sử chat
+   - Tạo grid layout với `<main>` bao quanh khu vực chat chính
    - Sử dụng `<article>` cho mỗi đoạn hội thoại, bao gồm câu hỏi và câu trả lời
    - Thêm vùng nhập liệu sử dụng thẻ `<textarea>` và nút "Gửi" với thẻ `<button>`
-   - Tạo phần lịch sử chat sử dụng danh sách không có thứ tự
+   - Tạo phần lịch sử chat sử dụng danh sách không có thứ tự `<ul>`
    - Thêm phần "Gợi ý câu hỏi" sử dụng `<aside>` ở bên cạnh khu vực chat chính
+   - Sử dụng `<footer>` cho phần nhập tin nhắn và các tùy chọn
+
 
 #### Buổi 3: Form và bảng
 1. Các thẻ form cơ bản:
@@ -165,60 +191,46 @@ Bài tập thực hành:
    - Thêm bảng hiển thị kỹ năng với các cột: Kỹ năng, Mức độ thành thạo, Kinh nghiệm (năm)
    - Tạo bảng timeline cho quá trình học tập và làm việc
 
-#### Buổi 4: Semantic HTML
-1. Hiểu về các thẻ semantic:
-   - `<header>`: Đánh dấu phần đầu của trang hoặc một phần nội dung.
-   - `<nav>`: Chứa các liên kết điều hướng chính.
-   - `<main>`: Bao bọc nội dung chính của trang.
-   - `<section>`: Nhóm các nội dung có liên quan với nhau.
-   - `<article>`: Đánh dấu một nội dung độc lập, có thể tái sử dụng.
-   - `<aside>`: Chứa thông tin phụ, liên quan đến nội dung xung quanh.
-   - `<footer>`: Đánh dấu phần cuối của trang hoặc một phần nội dung.
+#### Buổi 4: Nhúng multimedia và iframe, lý thuyết CORS
 
-2. Tại sao sử dụng semantic HTML và lợi ích của nó:
-   - Cải thiện khả năng đọc và bảo trì code.
-   - Tăng cường khả năng tiếp cận (accessibility) cho người dùng sử dụng công nghệ hỗ trợ.
-   - Hỗ trợ SEO bằng cách giúp các công cụ tìm kiếm hiểu rõ hơn về cấu trúc và nội dung của trang.
-   - Cải thiện trải nghiệm người dùng trên các thiết bị khác nhau.
+1. Nhúng audio và video:
+   - Thẻ `<audio>`: Nhúng và phát âm thanh
+     + Thuộc tính: src, controls, autoplay, loop
+     + Các định dạng âm thanh được hỗ trợ: MP3, WAV, OGG
+   - Thẻ `<video>`: Nhúng và phát video
+     + Thuộc tính: src, controls, width, height, poster, autoplay, loop
+     + Các định dạng video được hỗ trợ: MP4, WebM, OGG
 
-3. Cách sử dụng các thẻ semantic trong thực tế:
-   - Ví dụ về cấu trúc trang web sử dụng semantic HTML.
-   - Hướng dẫn cách chọn thẻ semantic phù hợp cho từng phần của trang.
+2. Sử dụng iframe:
+   - Cú pháp và thuộc tính cơ bản của thẻ `<iframe>`
+   - Nhúng nội dung từ các nguồn khác (ví dụ: YouTube, Google Maps)
+   - Vấn đề bảo mật khi sử dụng iframe và cách giải quyết
 
-4. So sánh giữa semantic HTML và non-semantic HTML:
-   - Ví dụ về cùng một nội dung được viết bằng semantic và non-semantic HTML.
-   - Phân tích ưu điểm của semantic HTML trong ví dụ.
+3. Lý thuyết CORS (Cross-Origin Resource Sharing):
+   - Định nghĩa và mục đích của CORS
+   - Same-origin policy và cách CORS mở rộng nó
+   - Các loại yêu cầu CORS: simple requests và preflighted requests
+   - Headers liên quan đến CORS: Origin, Access-Control-Allow-Origin
+   - Cách cấu hình CORS trên server
 
-5. Các thẻ semantic khác:
-   - `<figure>` và `<figcaption>`: Đánh dấu hình ảnh và chú thích.
-   - `<time>`: Đánh dấu thông tin về thời gian.
-   - `<mark>`: Đánh dấu văn bản được nhấn mạnh.
+4. Thực hành:
+   a. Trang thương mại điện tử Shopee:
+      - Nhúng video giới thiệu sản phẩm
+      - Sử dụng iframe để nhúng bản đồ vị trí cửa hàng
+   
+   b. Trang ChatGPT:
+      - Thêm tính năng ghi âm câu hỏi bằng thẻ audio
+      - Nhúng video hướng dẫn sử dụng từ YouTube
+   
+   c. Trang Portfolio:
+      - Tạo một phần trình chiếu các dự án bằng video
+      - Nhúng bản đồ vị trí làm việc bằng Google Maps iframe
 
-Bài tập thực hành:
-1. Trang thương mại điện tử Shopee:
-   - Sử dụng `<header>` cho phần đầu trang chứa logo và menu.
-   - Áp dụng `<nav>` cho menu điều hướng chính.
-   - Dùng `<main>` bao quanh phần nội dung chính của trang.
-   - Sử dụng `<section>` cho các phần như danh mục sản phẩm, sản phẩm nổi bật.
-   - Áp dụng `<article>` cho mỗi sản phẩm trong danh sách.
-   - Dùng `<aside>` cho phần sidebar chứa bộ lọc sản phẩm.
-   - Sử dụng `<footer>` cho phần cuối trang.
+5. Tổng kết và Q&A:
+   - Ôn tập các khái niệm đã học
+   - Thảo luận về best practices khi sử dụng multimedia và iframe
+   - Giải đáp thắc mắc của học viên về CORS và cách áp dụng trong thực tế
 
-2. Trang ChatGPT:
-   - Áp dụng `<header>` cho phần đầu trang chứa logo và menu người dùng.
-   - Sử dụng `<nav>` cho menu lịch sử chat.
-   - Dùng `<main>` bao quanh khu vực chat chính.
-   - Áp dụng `<article>` cho mỗi tin nhắn trong cuộc trò chuyện.
-   - Sử dụng `<footer>` cho phần nhập tin nhắn và các tùy chọn.
-
-3. Trang Portfolio:
-   - Sử dụng `<header>` cho phần đầu trang chứa tên và menu điều hướng.
-   - Áp dụng `<nav>` cho menu chính.
-   - Dùng `<main>` bao quanh nội dung chính của trang.
-   - Sử dụng `<section>` cho các phần như giới thiệu, kỹ năng, dự án.
-   - Áp dụng `<article>` cho mỗi dự án trong danh sách.
-   - Dùng `<aside>` cho phần thông tin liên hệ hoặc các liên kết mạng xã hội.
-   - Sử dụng `<footer>` cho phần cuối trang.
 
 #### Buổi 5: SEO cơ bản và thực hành
 1. Các thẻ meta:
@@ -288,7 +300,7 @@ Bài tập thực hành:
 
 5. Bài tập: Tạo một file CSS cho mỗi project, áp dụng các loại selectors đã học để style các phần tử HTML.
 
-#### Buổi 2: Box Model
+#### Buổi 2: Box Model và Đơn vị CSS
 1. Hiểu về Box Model:
    - Content: Nội dung thực tế của phần tử (văn bản, hình ảnh, v.v.).
    - Padding: Khoảng cách giữa nội dung và viền.
@@ -306,23 +318,38 @@ Bài tập thực hành:
    - Border: Đặt độ dày, kiểu dáng và màu sắc
    - Margin: Cú pháp shorthand và các giá trị riêng lẻ, margin collapse
 
-4. Thực hành áp dụng Box Model vào các project:
+4. Các đơn vị cơ bản trong CSS:
+   - Đơn vị tuyệt đối:
+     + px (pixels): Đơn vị phổ biến nhất, 1px tương đương với một điểm ảnh trên màn hình
+     + pt (points): Thường được sử dụng trong in ấn, 1pt = 1/72 inch
+     + cm (centimeters), mm (millimeters), in (inches): Đơn vị đo lường vật lý
+   - Đơn vị tương đối:
+     + % (phần trăm): Tính toán dựa trên kích thước của phần tử cha
+     + em: Tương đối với kích thước font của phần tử
+     + rem: Tương đối với kích thước font của phần tử gốc (root)
+     + vw, vh: Tương đối với kích thước của viewport (1vw = 1% chiều rộng viewport)
+   - Khi nào sử dụng mỗi loại đơn vị và ưu nhược điểm của chúng
+
+5. Thực hành áp dụng Box Model và các đơn vị CSS vào các project:
    a. Trang thương mại điện tử Shopee:
       - Tạo layout cho sản phẩm sử dụng padding và margin
       - Thiết lập border cho các phần tử như nút mua hàng, khung sản phẩm
       - Điều chỉnh khoảng cách giữa các phần tử sử dụng margin
+      - Sử dụng đơn vị % cho layout responsive và rem cho typography
 
    b. Trang ChatGPT:
       - Tạo khung chat với padding và border
       - Điều chỉnh khoảng cách giữa các tin nhắn sử dụng margin
       - Tạo nút gửi tin nhắn với border-radius và padding
+      - Sử dụng em cho kích thước font và vw, vh cho layout linh hoạt
 
    c. Trang Portfolio:
       - Tạo layout cho các phần dự án sử dụng padding và margin
       - Thiết lập border cho các hình ảnh dự án
       - Điều chỉnh khoảng cách giữa các phần của trang sử dụng margin
+      - Kết hợp px cho các giá trị cố định và % cho layout linh hoạt
 
-5. Bài tập: Áp dụng Box Model để tạo layout cơ bản cho cả ba project, đảm bảo các phần tử được căn chỉnh và có khoảng cách phù hợp.
+6. Bài tập: Áp dụng Box Model và các đơn vị CSS để tạo layout cơ bản cho cả ba project, đảm bảo các phần tử được căn chỉnh và có khoảng cách phù hợp. Sử dụng đơn vị phù hợp để tạo giao diện responsive và dễ bảo trì.
 
 #### Buổi 3: Flexbox
 1. Giới thiệu về Flexbox và các khái niệm cơ bản:
@@ -359,51 +386,55 @@ Bài tập thực hành:
 
 5. Bài tập: Áp dụng Flexbox để cải thiện layout và căn chỉnh các phần tử trong cả ba project, tập trung vào việc tạo giao diện linh hoạt và dễ điều chỉnh.
 
-#### Buổi 4: Grid Layout
-1. Giới thiệu về CSS Grid Layout:
-   - Khái niệm cơ bản về Grid Layout
-   - So sánh Grid Layout với Flexbox
-   - Ưu điểm và use cases của Grid Layout
+#### Buổi 4: Bootstrap Grid System
+1. Giới thiệu về Bootstrap Grid System:
+   - Khái niệm cơ bản về Bootstrap Grid System
+   - Ưu điểm và use cases của Bootstrap Grid System
+   - So sánh với CSS Grid và Flexbox
 
-2. Các thuộc tính của Grid container:
-   - `display: grid`: Kích hoạt Grid Layout
-   - `grid-template-columns`: Định nghĩa số lượng và kích thước các cột
-   - `grid-template-rows`: Định nghĩa số lượng và kích thước các hàng
-   - `grid-gap`: Thiết lập khoảng cách giữa các ô trong grid
-   - `grid-template-areas`: Định nghĩa các vùng trong grid
+2. Cấu trúc của Bootstrap Grid System:
+   - Container
+   - Row
+   - Column
+   - Breakpoints (xs, sm, md, lg, xl, xxl)
 
-3. Các thuộc tính của Grid items:
-   - `grid-column`: Xác định vị trí và độ rộng của item theo cột
-   - `grid-row`: Xác định vị trí và độ cao của item theo hàng
-   - `grid-area`: Đặt tên cho item và sử dụng trong grid-template-areas
+3. Các lớp cơ bản của Bootstrap Grid:
+   - `.container` và `.container-fluid`
+   - `.row`
+   - `.col`, `.col-*`, `.col-*-*`
 
-4. Các đơn vị đo lường trong Grid Layout:
-   - fr (fraction)
-   - auto
-   - minmax()
+4. Responsive columns:
+   - Sử dụng các lớp col-* cho các breakpoints khác nhau
+   - Auto-layout columns
 
-5. Căn chỉnh và điều chỉnh kích thước:
-   - justify-items và align-items
-   - justify-content và align-content
+5. Căn chỉnh và sắp xếp:
+   - Vertical alignment
+   - Horizontal alignment
+   - Column ordering
 
-6. Grid Layout responsive:
-   - Sử dụng auto-fit và auto-fill
-   - Kết hợp Grid Layout với Media Queries
+6. Nested grids và offset:
+   - Tạo grid lồng nhau
+   - Sử dụng offset để tạo khoảng trống
 
-7. Thực hành áp dụng Grid Layout vào các project:
+7. Utilities classes hỗ trợ:
+   - Spacing (margin và padding)
+   - Display
+   - Flex
+
+8. Thực hành áp dụng Bootstrap Grid System vào các project:
    a. Trang thương mại điện tử Shopee:
-      - Tạo layout tổng thể cho trang chủ sử dụng Grid
+      - Tạo layout tổng thể cho trang chủ sử dụng Bootstrap Grid
       - Thiết kế grid cho danh sách sản phẩm
 
    b. Trang ChatGPT:
-      - Tạo layout cho giao diện chat sử dụng Grid
+      - Tạo layout cho giao diện chat sử dụng Bootstrap Grid
       - Thiết kế grid cho phần hiển thị lịch sử chat
 
    c. Trang Portfolio:
       - Tạo layout tổng thể cho trang portfolio
       - Thiết kế grid cho phần showcase các dự án
 
-8. Bài tập: Áp dụng Grid Layout để cải thiện và tối ưu hóa layout cho cả ba project, tập trung vào việc tạo giao diện linh hoạt, responsive và dễ bảo trì.
+9. Bài tập: Áp dụng Bootstrap Grid System để cải thiện và tối ưu hóa layout cho cả ba project, tập trung vào việc tạo giao diện linh hoạt, responsive và dễ bảo trì.
 
 #### Buổi 5: Responsive Design
 1. Khái niệm về Responsive Design:
