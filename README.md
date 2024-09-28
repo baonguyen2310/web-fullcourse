@@ -3,8 +3,8 @@
 ## Mục lục
 1. [Frontend](#frontend-25-buổi)
    1. [HTML](#html-5-buổi)
-   2. [CSS](#css-8-buổi)
-   3. [JavaScript](#javascript-12-buổi)
+   2. [CSS](#css-7-buổi)
+   3. [JavaScript](#javascript-13-buổi)
 2. [Backend](#backend-25-buổi)
    1. [Cơ sở dữ liệu](#cơ-sở-dữ-liệu-13-buổi)
       1. [Nền tảng CSDL quan hệ](#nền-tảng-csdl-quan-hệ-3-buổi)
@@ -40,6 +40,12 @@
    - Thẻ `<strong>`: Nhấn mạnh văn bản (thường in đậm)
    - Thẻ `<em>`: Nhấn mạnh văn bản (thường in nghiêng)
 
+**Bonus:**
+    - Cái nhìn tổng quan về lập trình web
+    - Terminal cơ bản
+    - Git cơ bản
+    - Chrome DevTools
+    - Deployment với github.io
 Bài tập:
 1. Tạo trang chủ cho Shopee:
    - Sử dụng h1 cho logo Shopee
@@ -95,10 +101,16 @@ Bài tập:
 
 6. Các thẻ semantic khác:
    - `<figure>` và `<figcaption>`: Đánh dấu hình ảnh và chú thích
-   - `<time>`: Đánh dấu thông tin về thời gian
-   - `<mark>`: Đánh dấu văn bản được nhấn mạnh
 
-Bài tập thực hành:
+**Bonus:**
+    - Kiến thức về url
+    - Các đơn vị đo trong máy tính
+    - Các hệ đếm
+    - Các hệ màu
+    - Kinh nghiệm phân tích html trang web
+    - Cơ bản về pagination, infinite scroll
+
+**Bài tập thực hành: Lưu ý nên xem các trang web shopee, chatgpt thực tế để phân tích cấu trúc html của chúng**
 
 1. Tiếp tục phát triển trang Portfolio cá nhân:
    - Sử dụng `<header>` cho phần đầu trang với tên và ảnh đại diện
@@ -107,7 +119,7 @@ Bài tập thực hành:
    - Áp dụng `<section>` cho các phần: Giới thiệu, Kỹ năng, Dự án
    - Thêm hình ảnh minh họa cho mỗi dự án trong phần Dự án, sử dụng `<figure>` và `<figcaption>`
    - Sử dụng `<article>` cho mỗi dự án trong danh sách
-   - Dùng `<aside>` cho phần thông tin liên hệ hoặc các liên kết mạng xã hội
+   - Dùng `<aside>` cho banner quảng cáo
    - Sử dụng `<footer>` cho thông tin liên hệ và liên kết mạng xã hội
 
 2. Mở rộng trang chủ Shopee:
@@ -131,7 +143,43 @@ Bài tập thực hành:
    - Sử dụng `<footer>` cho phần nhập tin nhắn và các tùy chọn
 
 
-#### Buổi 3: Form và bảng
+#### Buổi 3: Nhúng multimedia và iframe, lý thuyết CORS
+
+1. Nhúng audio và video:
+   - Thẻ `<audio>`: Nhúng và phát âm thanh
+     + Thuộc tính: src, controls, autoplay, loop
+     + Các định dạng âm thanh được hỗ trợ: MP3, WAV, OGG
+   - Thẻ `<video>`: Nhúng và phát video
+     + Thuộc tính: src, controls, width, height, poster, autoplay, loop
+     + Các định dạng video được hỗ trợ: MP4, WebM, OGG
+
+2. Sử dụng iframe:
+   - Cú pháp và thuộc tính cơ bản của thẻ `<iframe>`
+   - Giải thích thuộc tính target trong thẻ a với iframe
+   - Nhúng nội dung từ các nguồn khác (ví dụ: YouTube, Google Maps)
+   - Vấn đề bảo mật khi sử dụng iframe và cách giải quyết
+
+3. Lý thuyết CORS (Cross-Origin Resource Sharing):
+   - Định nghĩa và mục đích của CORS
+   - Same-origin policy và cách CORS mở rộng nó
+   - Headers liên quan đến CORS: Origin, Access-Control-Allow-Origin
+   - Sơ lược về cấu hình CORS trên server
+
+4. Thực hành:
+   a. Trang thương mại điện tử Shopee:
+      - Nhúng video giới thiệu sản phẩm
+      - Sử dụng iframe để nhúng bản đồ vị trí cửa hàng
+   
+   b. Trang ChatGPT:
+      - Thêm tính năng ghi âm câu hỏi bằng thẻ audio
+      - Nhúng video hướng dẫn sử dụng từ YouTube
+   
+   c. Trang Portfolio:
+      - Tạo một phần trình chiếu các dự án bằng video
+      - Nhúng bản đồ vị trí làm việc bằng Google Maps iframe
+
+
+#### Buổi 4: Form và bảng
 1. Các thẻ form cơ bản:
    - `<form>`: Tạo một form HTML, thuộc tính quan trọng: action, method
    - `<input>`: Tạo các trường nhập liệu, các type phổ biến: text, password, email, number, checkbox, radio
@@ -169,11 +217,6 @@ Bài tập thực hành:
    - Validation dữ liệu phía client với HTML5
    - Giới thiệu ngắn gọn về xử lý dữ liệu form phía server (không đi sâu vào chi tiết)
 
-7. Tạo bảng phức tạp:
-   - Sử dụng `<caption>` để thêm tiêu đề cho bảng
-   - Tạo bảng lồng nhau
-   - Giới thiệu về việc tùy chỉnh giao diện bảng với CSS (không đi sâu vào chi tiết)
-
 Bài tập thực hành:
 
 1. Trang thương mại điện tử Shopee:
@@ -191,76 +234,47 @@ Bài tập thực hành:
    - Thêm bảng hiển thị kỹ năng với các cột: Kỹ năng, Mức độ thành thạo, Kinh nghiệm (năm)
    - Tạo bảng timeline cho quá trình học tập và làm việc
 
-#### Buổi 4: Nhúng multimedia và iframe, lý thuyết CORS
 
-1. Nhúng audio và video:
-   - Thẻ `<audio>`: Nhúng và phát âm thanh
-     + Thuộc tính: src, controls, autoplay, loop
-     + Các định dạng âm thanh được hỗ trợ: MP3, WAV, OGG
-   - Thẻ `<video>`: Nhúng và phát video
-     + Thuộc tính: src, controls, width, height, poster, autoplay, loop
-     + Các định dạng video được hỗ trợ: MP4, WebM, OGG
+#### Buổi 5: Các kỹ thuật SEO cơ bản và hoàn thiện khung xương html
+1. Các kỹ thuật SEO cơ bản:
+   - Các thẻ meta quan trọng:
+     + `<meta>`: Sử dụng các thuộc tính như charset, viewport.
+     + `<title>`: Viết tiêu đề trang hiệu quả.
+     + `<meta name="description">`: Tạo mô tả trang web hấp dẫn.
+     + Các thẻ Open Graph (og):
+       * `<meta property="og:title">`: Tiêu đề khi chia sẻ trên mạng xã hội.
+       * `<meta property="og:description">`: Mô tả khi chia sẻ trên mạng xã hội.
+       * `<meta property="og:image">`: Hình ảnh hiển thị khi chia sẻ.
+       * `<meta property="og:url">`: URL của trang web.
+       * `<meta property="og:type">`: Loại nội dung (ví dụ: website, article).
+   - Tối ưu hóa HTML:
+     + Sử dụng URL thân thiện.
+     + Tối ưu hóa tốc độ tải trang.
+     + Thêm alt text cho hình ảnh.
+     + Tạo sitemap và robots.txt.
+     + Xây dựng liên kết nội bộ hiệu quả.
+     + Tối ưu hóa nội dung (từ khóa, độ dài).
+     + Tối ưu hóa cho thiết bị di động.
 
-2. Sử dụng iframe:
-   - Cú pháp và thuộc tính cơ bản của thẻ `<iframe>`
-   - Nhúng nội dung từ các nguồn khác (ví dụ: YouTube, Google Maps)
-   - Vấn đề bảo mật khi sử dụng iframe và cách giải quyết
-
-3. Lý thuyết CORS (Cross-Origin Resource Sharing):
-   - Định nghĩa và mục đích của CORS
-   - Same-origin policy và cách CORS mở rộng nó
-   - Các loại yêu cầu CORS: simple requests và preflighted requests
-   - Headers liên quan đến CORS: Origin, Access-Control-Allow-Origin
-   - Cách cấu hình CORS trên server
-
-4. Thực hành:
+2. Hoàn thiện khung xương html cho 3 project: **Chú ý hoàn thiện ít nhất 3 site cho mỗi project**
    a. Trang thương mại điện tử Shopee:
-      - Nhúng video giới thiệu sản phẩm
-      - Sử dụng iframe để nhúng bản đồ vị trí cửa hàng
-   
+      - Thêm các thẻ meta cần thiết (charset, viewport, description, og tags).
+      - Tối ưu cấu trúc HTML với các thẻ semantic (header, nav, main, footer).
+      - Thêm alt text cho tất cả hình ảnh sản phẩm.
+      - Tạo sitemap.xml và robots.txt.
+
    b. Trang ChatGPT:
-      - Thêm tính năng ghi âm câu hỏi bằng thẻ audio
-      - Nhúng video hướng dẫn sử dụng từ YouTube
-   
+      - Bổ sung các thẻ meta quan trọng (title, description, og tags).
+      - Sử dụng các thẻ heading (h1, h2, h3) một cách hợp lý.
+      - Tối ưu URL cho các trang con (ví dụ: /chat, /settings).
+      - Đảm bảo trang web thân thiện với thiết bị di động.
+
    c. Trang Portfolio:
-      - Tạo một phần trình chiếu các dự án bằng video
-      - Nhúng bản đồ vị trí làm việc bằng Google Maps iframe
+      - Thêm các thẻ meta cần thiết, bao gồm cả og tags cho chia sẻ mạng xã hội.
+      - Tối ưu cấu trúc HTML với các thẻ semantic (article, section, aside).
+      - Tạo các liên kết nội bộ giữa các phần của trang.
+      - Tối ưu nội dung với từ khóa phù hợp cho mỗi dự án.
 
-5. Tổng kết và Q&A:
-   - Ôn tập các khái niệm đã học
-   - Thảo luận về best practices khi sử dụng multimedia và iframe
-   - Giải đáp thắc mắc của học viên về CORS và cách áp dụng trong thực tế
-
-
-#### Buổi 5: SEO cơ bản và thực hành
-1. Các thẻ meta:
-   - `<meta>`: Giới thiệu và cách sử dụng các thuộc tính quan trọng như charset, viewport.
-   - `<title>`: Tầm quan trọng của tiêu đề trang và cách viết tiêu đề hiệu quả.
-   - `<meta name="description">`: Cách viết mô tả trang web hấp dẫn và tối ưu cho SEO.
-
-2. Cách tối ưu hóa HTML cho SEO:
-   - Sử dụng URL thân thiện.
-   - Tối ưu hóa tốc độ tải trang.
-   - Sử dụng alt text cho hình ảnh.
-   - Tạo sitemap và robots.txt.
-   - Liên kết nội bộ hiệu quả.
-
-3. Sử dụng các thẻ heading đúng cách:
-   - Cấu trúc heading hợp lý (H1, H2, H3, ...).
-   - Sử dụng từ khóa trong heading.
-   - Tránh lạm dụng heading.
-
-4. Các kỹ thuật SEO on-page khác:
-   - Tối ưu hóa nội dung (sử dụng từ khóa, độ dài nội dung).
-   - Sử dụng schema markup.
-   - Tối ưu hóa cho mobile.
-
-5. Thực hành:
-   - Áp dụng các kỹ thuật SEO đã học vào 3 project:
-     a. Trang thương mại điện tử Shopee
-     b. Trang ChatGPT
-     c. Trang Portfolio
-   - Phân tích và đánh giá hiệu quả SEO của mỗi project.
 
 ### CSS (8 buổi)
 #### Buổi 1: Cú pháp CSS và Selectors
@@ -298,27 +312,8 @@ Bài tập thực hành:
       - Áp dụng class selectors cho các phần dự án (.project-item).
       - Sử dụng pseudo-class selectors cho menu navigation (:active, :focus).
 
-5. Bài tập: Tạo một file CSS cho mỗi project, áp dụng các loại selectors đã học để style các phần tử HTML.
-
 #### Buổi 2: Box Model và Đơn vị CSS
-1. Hiểu về Box Model:
-   - Content: Nội dung thực tế của phần tử (văn bản, hình ảnh, v.v.).
-   - Padding: Khoảng cách giữa nội dung và viền.
-   - Border: Đường viền xung quanh padding và nội dung.
-   - Margin: Khoảng cách giữa phần tử và các phần tử xung quanh.
-
-2. Cách tính toán kích thước của các phần tử:
-   - Tổng chiều rộng = width + left padding + right padding + left border + right border + left margin + right margin
-   - Tổng chiều cao = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
-   - Giải thích về box-sizing: content-box vs border-box
-
-3. Sử dụng các thuộc tính `width`, `height`, `padding`, `border`, `margin`:
-   - Width và height: Đặt kích thước cho content
-   - Padding: Cú pháp shorthand và các giá trị riêng lẻ (top, right, bottom, left)
-   - Border: Đặt độ dày, kiểu dáng và màu sắc
-   - Margin: Cú pháp shorthand và các giá trị riêng lẻ, margin collapse
-
-4. Các đơn vị cơ bản trong CSS:
+1. Các đơn vị cơ bản trong CSS:
    - Đơn vị tuyệt đối:
      + px (pixels): Đơn vị phổ biến nhất, 1px tương đương với một điểm ảnh trên màn hình
      + pt (points): Thường được sử dụng trong in ấn, 1pt = 1/72 inch
@@ -329,6 +324,22 @@ Bài tập thực hành:
      + rem: Tương đối với kích thước font của phần tử gốc (root)
      + vw, vh: Tương đối với kích thước của viewport (1vw = 1% chiều rộng viewport)
    - Khi nào sử dụng mỗi loại đơn vị và ưu nhược điểm của chúng
+2. Hiểu về Box Model:
+   - Content: Nội dung thực tế của phần tử (văn bản, hình ảnh, v.v.).
+   - Padding: Khoảng cách giữa nội dung và viền.
+   - Border: Đường viền xung quanh padding và nội dung.
+   - Margin: Khoảng cách giữa phần tử và các phần tử xung quanh.
+
+3. Cách tính toán kích thước của các phần tử:
+   - Tổng chiều rộng = width + left padding + right padding + left border + right border + left margin + right margin
+   - Tổng chiều cao = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+   - Giải thích về box-sizing: content-box vs border-box
+
+4. Sử dụng các thuộc tính `width`, `height`, `padding`, `border`, `margin`:
+   - Width và height: Đặt kích thước cho content
+   - Padding: Cú pháp shorthand và các giá trị riêng lẻ (top, right, bottom, left)
+   - Border: Đặt độ dày, kiểu dáng và màu sắc
+   - Margin: Cú pháp shorthand và các giá trị riêng lẻ, margin collapse
 
 5. Thực hành áp dụng Box Model và các đơn vị CSS vào các project:
    a. Trang thương mại điện tử Shopee:
@@ -348,8 +359,6 @@ Bài tập thực hành:
       - Thiết lập border cho các hình ảnh dự án
       - Điều chỉnh khoảng cách giữa các phần của trang sử dụng margin
       - Kết hợp px cho các giá trị cố định và % cho layout linh hoạt
-
-6. Bài tập: Áp dụng Box Model và các đơn vị CSS để tạo layout cơ bản cho cả ba project, đảm bảo các phần tử được căn chỉnh và có khoảng cách phù hợp. Sử dụng đơn vị phù hợp để tạo giao diện responsive và dễ bảo trì.
 
 #### Buổi 3: Flexbox
 1. Giới thiệu về Flexbox và các khái niệm cơ bản:
@@ -390,13 +399,12 @@ Bài tập thực hành:
 1. Giới thiệu về Bootstrap Grid System:
    - Khái niệm cơ bản về Bootstrap Grid System
    - Ưu điểm và use cases của Bootstrap Grid System
-   - So sánh với CSS Grid và Flexbox
 
 2. Cấu trúc của Bootstrap Grid System:
    - Container
    - Row
    - Column
-   - Breakpoints (xs, sm, md, lg, xl, xxl)
+   - Breakpoints (xs, sm, md, lg, xl)
 
 3. Các lớp cơ bản của Bootstrap Grid:
    - `.container` và `.container-fluid`
@@ -405,23 +413,12 @@ Bài tập thực hành:
 
 4. Responsive columns:
    - Sử dụng các lớp col-* cho các breakpoints khác nhau
-   - Auto-layout columns
 
 5. Căn chỉnh và sắp xếp:
    - Vertical alignment
    - Horizontal alignment
-   - Column ordering
 
-6. Nested grids và offset:
-   - Tạo grid lồng nhau
-   - Sử dụng offset để tạo khoảng trống
-
-7. Utilities classes hỗ trợ:
-   - Spacing (margin và padding)
-   - Display
-   - Flex
-
-8. Thực hành áp dụng Bootstrap Grid System vào các project:
+6. Thực hành áp dụng Bootstrap Grid System vào các project:
    a. Trang thương mại điện tử Shopee:
       - Tạo layout tổng thể cho trang chủ sử dụng Bootstrap Grid
       - Thiết kế grid cho danh sách sản phẩm
@@ -433,8 +430,6 @@ Bài tập thực hành:
    c. Trang Portfolio:
       - Tạo layout tổng thể cho trang portfolio
       - Thiết kế grid cho phần showcase các dự án
-
-9. Bài tập: Áp dụng Bootstrap Grid System để cải thiện và tối ưu hóa layout cho cả ba project, tập trung vào việc tạo giao diện linh hoạt, responsive và dễ bảo trì.
 
 #### Buổi 5: Responsive Design
 1. Khái niệm về Responsive Design:
@@ -484,97 +479,41 @@ Bài tập thực hành:
 
 8. Bài tập: Áp dụng các kỹ thuật Responsive Design đã học để tối ưu hóa giao diện của cả ba project trên các thiết bị desktop, tablet và mobile. Tập trung vào việc cải thiện trải nghiệm người dùng trên mọi kích thước màn hình.
 
-#### Buổi 6: Animations
-1. Giới thiệu về CSS Animations:
-   - Định nghĩa và tầm quan trọng của animations trong thiết kế web
-   - So sánh animations với transitions
-   - Các trường hợp sử dụng phù hợp cho animations
+#### Buổi 6: Animations và Transitions
+1. Giới thiệu về CSS Animations và Transitions:
+   - Định nghĩa và tầm quan trọng trong thiết kế web
+   - So sánh animations và transitions
+   - Các trường hợp sử dụng phù hợp
 
-2. Sử dụng `@keyframes` để tạo animations:
-   - Cú pháp cơ bản của `@keyframes`
-   - Định nghĩa các trạng thái (keyframes) cho animation
-   - Sử dụng từ khóa `from` và `to`
-   - Sử dụng phần trăm để định nghĩa các trạng thái trung gian
+2. CSS Animations:
+   - Sử dụng `@keyframes` để tạo animations
+   - Các thuộc tính animation cơ bản: name, duration, timing-function, delay, iteration-count, direction, fill-mode, play-state
+   - Kết hợp nhiều animations
 
-3. Các thuộc tính animation:
-   - `animation-name`: Đặt tên cho animation
-   - `animation-duration`: Xác định thời gian chạy của animation
-   - `animation-timing-function`: Điều chỉnh tốc độ của animation (linear, ease-in, ease-out, ease-in-out, cubic-bezier)
-   - `animation-delay`: Thiết lập thời gian trễ trước khi animation bắt đầu
-   - `animation-iteration-count`: Xác định số lần lặp lại của animation (số cụ thể hoặc infinite)
-   - `animation-direction`: Điều chỉnh hướng chạy của animation (normal, reverse, alternate, alternate-reverse)
-   - `animation-fill-mode`: Xác định trạng thái của phần tử trước và sau khi animation kết thúc
-   - `animation-play-state`: Điều khiển trạng thái chạy/dừng của animation
-
-4. Kết hợp nhiều animations:
-   - Cách áp dụng nhiều animations cho cùng một phần tử
-   - Sử dụng dấu phẩy để phân tách các animations
-
-5. Performance và tối ưu hóa:
-   - Sử dụng `will-change` để cải thiện hiệu suất
-   - Tránh animations gây ảnh hưởng đến layout
-   - Sử dụng `transform` và `opacity` cho animations mượt mà
-
-6. Thực hành áp dụng animations vào các project:
-   a. Trang thương mại điện tử Shopee:
-      - Tạo hiệu ứng fade-in cho sản phẩm khi load trang
-      - Animations cho hover effects trên các sản phẩm
-      - Tạo hiệu ứng slide-in cho menu mobile
-
-   b. Trang ChatGPT:
-      - Animations cho tin nhắn mới xuất hiện
-      - Hiệu ứng gõ chữ (typing effect) cho phản hồi của AI
-      - Animations cho nút gửi tin nhắn
-
-   c. Trang Portfolio:
-      - Tạo hiệu ứng parallax cho background
-      - Animations cho các phần tử khi scroll
-      - Hiệu ứng hover cho các project showcases
-
-7. Bài tập: Áp dụng các kỹ thuật animation đã học để tạo ra các hiệu ứng hấp dẫn và cải thiện trải nghiệm người dùng cho cả ba project. Tập trung vào việc tạo ra các animations có ý nghĩa và không gây phiền nhiễu cho người dùng.
-
-#### Buổi 7: Transitions
-1. Giới thiệu về CSS Transitions:
-   - Định nghĩa và tầm quan trọng của transitions trong thiết kế web
-   - So sánh transitions với animations
-   - Các trường hợp sử dụng phù hợp cho transitions
-
-2. Các thuộc tính transition:
-   - `transition-property`: Xác định thuộc tính CSS sẽ được áp dụng transition
-   - `transition-duration`: Thiết lập thời gian diễn ra transition
-   - `transition-timing-function`: Điều chỉnh tốc độ của transition (linear, ease-in, ease-out, ease-in-out, cubic-bezier)
-   - `transition-delay`: Xác định thời gian trễ trước khi transition bắt đầu
-   - Cú pháp rút gọn của transition
-
-3. Tạo hiệu ứng chuyển đổi mượt mà cho các phần tử:
-   - Áp dụng transitions cho các thuộc tính như màu sắc, kích thước, vị trí, độ trong suốt
-   - Kết hợp transitions với pseudo-classes (:hover, :focus, :active)
-   - Sử dụng transitions cho các hiệu ứng đơn giản và phức tạp
+3. CSS Transitions:
+   - Các thuộc tính transition: property, duration, timing-function, delay
+   - Tạo hiệu ứng chuyển đổi mượt mà cho các phần tử
+   - Kết hợp transitions với pseudo-classes
 
 4. Performance và tối ưu hóa:
-   - Chọn các thuộc tính phù hợp để áp dụng transition (ưu tiên transform và opacity)
-   - Tránh sử dụng transition cho quá nhiều thuộc tính cùng lúc
-   - Sử dụng will-change để cải thiện hiệu suất khi cần thiết
+   - Sử dụng `will-change` để cải thiện hiệu suất
+   - Ưu tiên sử dụng `transform` và `opacity` cho animations và transitions
+   - Tránh ảnh hưởng đến layout
 
-5. Thực hành áp dụng transitions vào các project:
+5. Thực hành áp dụng vào các project:
    a. Trang thương mại điện tử Shopee:
-      - Tạo hiệu ứng hover mượt mà cho các sản phẩm
-      - Transition cho menu dropdown
-      - Hiệu ứng chuyển đổi cho các nút và form elements
+      - Hiệu ứng fade-in cho sản phẩm, hover effects
+      - Transition cho menu dropdown và các nút tương tác
 
    b. Trang ChatGPT:
-      - Transition cho việc mở rộng/thu gọn sidebar
-      - Hiệu ứng chuyển đổi màu sắc cho các nút tương tác
-      - Transition cho việc hiển thị/ẩn các phần tử UI
+      - Animations cho tin nhắn mới và hiệu ứng gõ chữ
+      - Transition cho sidebar và các phần tử UI
 
    c. Trang Portfolio:
-      - Tạo hiệu ứng hover mượt mà cho các project showcases
-      - Transition cho menu navigation
-      - Hiệu ứng chuyển đổi cho các section khi scroll
+      - Hiệu ứng parallax và animations khi scroll
+      - Transition cho menu navigation và project showcases
 
-6. Bài tập: Áp dụng các kỹ thuật transition đã học để cải thiện trải nghiệm người dùng cho cả ba project. Tập trung vào việc tạo ra các chuyển đổi mượt mà và tự nhiên, đồng thời đảm bảo hiệu suất tốt cho trang web.
-
-#### Buổi 8: SASS/SCSS
+#### Buổi 7: SASS/SCSS
 1. Giới thiệu về SASS/SCSS:
    - Định nghĩa và sự khác biệt giữa SASS và SCSS
    - Lợi ích của việc sử dụng SASS/SCSS trong phát triển web
@@ -616,23 +555,43 @@ Bài tập thực hành:
       - Áp dụng extends để tái sử dụng styles cho các section
       - Tạo các function SASS/SCSS để tính toán kích thước responsive
 
-7. Bài tập: Áp dụng SASS/SCSS để refactor CSS cho cả ba project. Tập trung vào việc tổ chức code, sử dụng biến, mixins, và extends để tạo ra một codebase dễ bảo trì và mở rộng.
-
-### JavaScript (12 buổi)
+### JavaScript (13 buổi)
 #### Cơ bản (5 buổi)
 ##### Buổi 1: Cú pháp và Biến
 1. Cú pháp cơ bản của JavaScript:
    - Cấu trúc của một chương trình JavaScript
    - Cách viết comments (// và /* */)
-   - Sử dụng dấu chấm phẩy (;) để kết thúc câu lệnh
+   - Sử dụng dấu chấm phẩy ; để kết thúc câu lệnh
    - Phân biệt chữ hoa và chữ thường trong JavaScript
 
 2. Khai báo và sử dụng biến:
    - Sử dụng `var`, `let`, và `const` để khai báo biến
    - Phạm vi của biến (global scope và block scope)
    - Quy tắc đặt tên biến
-   - Các kiểu dữ liệu cơ bản: Number, String, Boolean, Undefined, Null
-   - Ép kiểu và chuyển đổi kiểu dữ liệu
+   - Các kiểu dữ liệu cơ bản:
+     + Number: Đại diện cho số nguyên và số thực (ví dụ: 42, 3.14)
+     + String: Chuỗi ký tự (ví dụ: "Hello, World!")
+     + Boolean: Giá trị logic true hoặc false
+     + Undefined: Biến được khai báo nhưng chưa được gán giá trị
+     + Null: Đại diện cho giá trị không tồn tại hoặc không hợp lệ
+     + Symbol (ES6): Giá trị duy nhất và không thay đổi
+     + BigInt (ES11): Số nguyên có độ chính xác tùy ý
+     + Object: Kiểu dữ liệu phức tạp, có thể chứa nhiều giá trị khác nhau
+     + Array: Một loại object đặc biệt dùng để lưu trữ danh sách các giá trị
+   - Ép kiểu và chuyển đổi kiểu dữ liệu:
+     - Ép kiểu ngầm định (implicit type coercion)
+     - Ép kiểu tường minh (explicit type conversion)
+     - Sử dụng các hàm chuyển đổi: parseInt(), parseFloat(), String(), Number(), Boolean()
+     - Chuyển đổi giữa các kiểu dữ liệu: số sang chuỗi, chuỗi sang số, số sang boolean, v.v.
+     - Các trường hợp đặc biệt: NaN, Infinity, -Infinity
+     - Best practices khi làm việc với ép kiểu và chuyển đổi kiểu dữ liệu:
+       + Sử dụng ép kiểu tường minh thay vì ngầm định để tăng tính rõ ràng của code
+       + Luôn kiểm tra kiểu dữ liệu trước khi thực hiện chuyển đổi
+       + Sử dụng các hàm như isNaN() để kiểm tra kết quả chuyển đổi số
+       + Tránh sử dụng == và thay bằng === để so sánh chính xác cả giá trị và kiểu
+       + Cẩn thận khi chuyển đổi số thập phân sang số nguyên để tránh mất độ chính xác
+       + Sử dụng template literals (`${variable}`) thay vì cộng chuỗi để tránh ép kiểu ngầm định
+       + Khi làm việc với dữ liệu từ API hoặc input người dùng, luôn validate và sanitize trước khi chuyển đổi
 
 3. Thực hành:
    a. Trang thương mại điện tử Shopee:
@@ -997,6 +956,33 @@ Bài tập thực hành:
    - Thực hiện code review cho các dự án đã làm
    - Tối ưu hóa code để cải thiện hiệu suất và khả năng bảo trì
    - Áp dụng các best practices và design patterns đã học
+
+###### Buổi 13: Tổng kết và thực hành khoá frontend
+1. Tổng kết kiến thức Frontend:
+   - HTML: Cấu trúc, semantic tags, forms, multimedia
+   - CSS: Selectors, box model, flexbox, grid, responsive design, animations
+   - JavaScript: Syntax, functions, objects, DOM manipulation, events, asynchronous programming, ES6+ features, modules
+
+2. Thực hành tổng hợp:
+   a. Trang thương mại điện tử Shopee:
+      - Tạo trang chủ với danh sách sản phẩm động, filter và sort
+      - Implement giỏ hàng với localStorage
+      - Tạo trang chi tiết sản phẩm với gallery ảnh và đánh giá
+      - Optimize performance với lazy loading và code splitting
+
+   b. Trang ChatGPT:
+      - Xây dựng giao diện chat responsive
+      - Implement real-time messaging với WebSocket hoặc long polling
+      - Tạo hệ thống authentication và authorization
+      - Thêm tính năng code highlighting và markdown rendering
+
+   c. Trang Portfolio:
+      - Thiết kế layout responsive với grid và flexbox
+      - Tạo animations cho các section transitions
+      - Implement dark mode với CSS variables
+      - Tạo form liên hệ với client-side validation
+
+3. Giới thiệu về React và Next.js
 
 ## Backend (25 buổi)
 ### Cơ sở dữ liệu (13 buổi)

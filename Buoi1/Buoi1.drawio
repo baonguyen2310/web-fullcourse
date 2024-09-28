@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="192BWhAwzLiMw3UReCF3" name="Buoi1-1">
-        <mxGraphModel dx="816" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1028" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -47,32 +47,32 @@
         </mxGraphModel>
     </diagram>
     <diagram id="-YLL5LlST_3lm3iehWfV" name="Buoi1-2">
-        <mxGraphModel dx="955" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1469" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2GLKIDWK0WjUrEkQLPs_-1" value="git" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2GLKIDWK0WjUrEkQLPs_-1" value="git" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="230" y="40" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="2GLKIDWK0WjUrEkQLPs_-2" value="repository&lt;br&gt;(kho)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2GLKIDWK0WjUrEkQLPs_-2" value="repository&lt;br&gt;(kho)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="170" y="170" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="2GLKIDWK0WjUrEkQLPs_-4" value="quản lý lịch sử thay đổi code: ai là người thay đổi, dòng nào, vào ngày nào" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="2GLKIDWK0WjUrEkQLPs_-4" value="quản lý lịch sử thay đổi code: ai là người thay đổi, dòng nào, vào ngày nào" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="230" y="80" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7-byKBkhafnd_Zo73qN4-1" value="commit&lt;br&gt;(mỗi lần chấp nhận thay đổi code)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7-byKBkhafnd_Zo73qN4-1" value="commit&lt;br&gt;(mỗi lần chấp nhận thay đổi code)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="290" y="170" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7-byKBkhafnd_Zo73qN4-2" value="github" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7-byKBkhafnd_Zo73qN4-2" value="github" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="510" y="40" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7-byKBkhafnd_Zo73qN4-3" value="trang web,&lt;br&gt;cung cấp dịch vụ: tạo và quản các repo&lt;br&gt;(remote repository)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7-byKBkhafnd_Zo73qN4-3" value="trang web,&lt;br&gt;cung cấp dịch vụ: tạo và quản các repo&lt;br&gt;(remote repository)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="510" y="90" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="7-byKBkhafnd_Zo73qN4-4" value="1. git clone url : sao chép repo từ xa về máy&lt;br&gt;2. git status: kiểm tra trạng thái&lt;br&gt;3. git add . : thêm các file cho git theo dõi&lt;br&gt;4. git commit -m &quot;message&quot;: chấp nhận các thay đổi&lt;br&gt;5. git push -u origin main: đẩy các thay đổi lên github&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7-byKBkhafnd_Zo73qN4-4" value="1. git clone url : sao chép repo từ xa về máy&lt;br&gt;2. git status: kiểm tra trạng thái&lt;br&gt;3. git add . : thêm các file cho git theo dõi&lt;br&gt;4. git commit -m &quot;message&quot;: chấp nhận các thay đổi&lt;br&gt;5. git push -u origin main: đẩy các thay đổi lên github&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="160" y="240" width="310" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="7-byKBkhafnd_Zo73qN4-5" value="CMD (terminal) (giao diện dòng lệnh)&lt;br&gt;cd Documents: di chuyển vào thư mục&lt;br&gt;cd shopee-clone&lt;br&gt;code .: mở vs code tại thư mục đó&lt;br&gt;mkdir &amp;lt;tên thư mục&amp;gt; : tạo thư mục" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="7-byKBkhafnd_Zo73qN4-5" value="CMD (terminal) (giao diện dòng lệnh)&lt;br&gt;cd Documents: di chuyển vào thư mục&lt;br&gt;cd shopee-clone&lt;br&gt;code .: mở vs code tại thư mục đó&lt;br&gt;mkdir &amp;lt;tên thư mục&amp;gt; : tạo thư mục" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="160" y="414" width="240" height="90" as="geometry"/>
                 </mxCell>
             </root>
