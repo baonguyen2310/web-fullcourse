@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+
+        /* * {
+            color:orange;
+        } */
+
+        .myClass {
+            color:green;
+        }
+        h2 {
+            color: blue !important;
+        }
+
+        #myId {
+            color:violet;
+        }
+
+        [type="text"] {
+            background-color: blue;
+        }
+
+        .input {
+            background-color: red;
+        }
+
+        .input:hover {
+            background-color: green;
+        }
+
+        .input:focus {
+            background-color: yellow;
+        }
+
+        .submit:focus {
+            background-color: yellow;
+        }
+
+        .submit:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        .myClass::before {
+            content: "";
+            background-color: red;
+            width:10px;
+        }
+
+        .myClass::after {
+            content: "After...";
+        }
+
+        div.product {
+            background-color: red;
+        }
+
+        /* li {
+            color: orange;
+        } */
+
+        ul > li {
+            color: blue;
+        }
+
+        /* ul li {
+            color: blue;
+        } */
+
+    </style>
+    
+
+</head>
+<body>
+    <!--  HEADER  -->
+
+    <img src="static/img/heart.svg" alt="heart" width="50px">
+
+    <svg fill="red" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 471.701 471.701" xml:space="preserve">
+<g>
+	<path d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1
+		c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3
+		l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4
+		C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3
+		s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4
+		c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3
+		C444.801,187.101,434.001,213.101,414.401,232.701z"/>
+</g>
+</svg>
+
+
+    <!--  MAIN  -->
+
+    <h2 style="color: red;" >Hello</h2>
+    <h2>Hello &#x2665;&#xfe0f;</h2>
+    <h2 class="myClass">Hello</h2>
+    <h2 id="myId">Hello</h2>
+    <h2>Hello</h2>
+    <h2>Hello</h2>
+    <!-- <h2>Hello</h2> -->
+
+    <input type="number" class="input">
+    <input type="password">
+    <input type="text">
+    <input type="email">
+    <button class="submit">Submit</button>
+
+    <div class="product">Product Item</div>
+
+    <ul>
+        <li>
+            Toán
+        </li>
+        <li>
+            Văn
+        </li>
+        <li>Anh
+            <ol>
+                <li>
+                    Nghe
+                </li>
+                <li>
+                    Nói
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    ĐỘ ƯU TIÊN CSS
+    !important
+    inline
+    id
+    class
+    tag
+    internal, external (cái nào sau thì cái đó ưu tiên (ghi đè cái trước))
+    *
+
+
+
+    <!-- FOOTER -->
+
+</body>
+</html>
+
+
+
+ICON HEART:
+- CSS BEFORE, AFTER: KỸ NĂNG CAO
+- HÌNH ẢNH: JPG, PNG (transparent background), WEBP, SVG
+- FONT
+
+
+
+CLEAN CODE: => dễ hiểu, dễ đọc => dễ bảo trì
+=> cho người khác
+=> cho mình
+
+- Đặt tên:
+    + a, b, i, j: không có nghĩa => không nhớ, không hiểu
+    + tên biến: productName, storeName, productPrice => danh từ
+    + tên hàm: động từ: chat(), printf(), console.log()
+                        addToCart(), deleteProductFromCart(),
+                        increaseQuantity()
+
+        abs(), min(), max(), fibonacci(): danh từ => nhanh
+        main(): entry point (điểm bắt đâu)
+
+        getPointMax() # pointMax
+
+        pointMax = getPointMax(PointList)
+
+        Lập trình web: Lập trình hướng sự kiện (chủ yếu)
+
++ camelCase: js, css class
++ kebab-case: css class
++ PascalCase: js class (OOP) (interface)
++ SCREAMING_SNAKE_CASE: hằng số (const) (.env)
++ snake_case: khó nhìn
++ lowercase: khó nhìn
++ UPPERCASE: khó nhìn
+
+* Đặt tên class trong html css: Vì bị conflict (mâu thuẫn)
+- Chuẩn BEM: block__element--material, ví dụ: product__item--active
+
+
+            Thường: product-list (ul), product-item (li)
+                    product-item-link (a), product-item-title (h2)
+                    product-item-content (p), product-item-img (img)
+                    chat-submit-btn (button), chat-input (input)
+                    post-header (h1)
+            Chung trạng thái: btn-disabled, btn-enabled
+                                product-item-active
+
+
+
+
+- Module CSS: framework: style.module.css: gắn id cho mỗi class lúc biên dịch
+    Ví dụ:  submit-btn   ====> submit-btn-213434543
+            submit-btn   ====> submit-btn-3245t5y6r
+
+- Comment:
+    + Hạn chế tối đa comment: để cho code tự diễn đạt nghĩa của nó
+    + comment đừng để người đọc khó hiểu thêm
+    + comment nên nói rằng đoạn code này làm gì chứ không phải làm như thế nào
+
+
+    const double PI = 3.14
+    chuvihinhtron = 2*PI*bankinh
+
+    + Nên comment khi có nhiều đoạn để tách ra nhìn cho dễ
