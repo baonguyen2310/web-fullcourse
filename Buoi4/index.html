@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: #E6A4B4;
+            --text-color: #F5F7F8;
+            --secondary-color: #F4CE14;
+            --background-color: #45474B;
+        }
+
+
+        .parent {
+            background-color: var(--background-color);
+            width: 500px;
+            height: 100px;
+        }
+
+        .child {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            width: 50%;
+            height: 2rem;
+            font-size: 20px;
+        }
+
+        .test-viewport {
+            background-color: var(--primary-color);
+            width: 50vw;
+            height: 2rem;
+
+            /* padding: 10px; */
+            /* padding: 10px 20px 30px 40px; theo chieu kim dong ho*/
+            /* padding: 10px 20px; tren-duoi trai-phai */ 
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            border: 5px dashed red;
+
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .container-1 {
+            background-color: var(--primary-color);
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .container-2 {
+            background-color: var(--primary-color);
+            width: 100px;
+            height: 100px;
+            float: right;
+
+            color: blue;
+            
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+            font-family: "Qwitcher Grypen", cursive;
+            
+            
+            text-align: center;
+            text-decoration: underline;
+            
+        }
+
+        .custom-user-icon {
+            color: var(--secondary-color);
+            font-size: 4rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            Hello
+        </div>
+    </div>
+
+
+    <div class="test-viewport">
+        Hello
+    </div>
+
+    Mặc định: box-sizing: content-box: 
+    witdh và height của phần tử không gồm border và padding
+
+    box-sizing: border-box:
+    witdh và height của phần tử bao gồm border và padding
+
+    <div class="container-1">
+        A
+    </div>
+    <div class="container-2">
+        B
+    </div>
+
+    https://colorhunt.co/
+
+    color pallet => tái sử dụng
+
+    fontawesome cdn: bản chất là ký tự unicode
+
+    <i class="fa-solid fa-user custom-user-icon"></i>
+    <i class="fa-regular fa-user custom-user-icon"></i>
+
+
+
+</body>
+</html>
