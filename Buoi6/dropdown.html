@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Links on Hover</title>
+    <style>
+    	* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        position: relative;
+        margin: 50px;
+      }
+
+      .download-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .download-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+        width: 150px;
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .dropdown a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .container:hover .dropdown {
+        display: block;
+      }
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="download-btn">Tải xuống</button>
+        <div class="dropdown">
+            <a href="#">Link tải 1</a>
+            <a href="#">Link tải 2</a>
+            <a href="#">Link tải 3</a>
+        </div>
+    </div>
+</body>
+</html>

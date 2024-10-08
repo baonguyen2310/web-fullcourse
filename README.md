@@ -20,6 +20,7 @@
    5. [Terminal/Command Line](#terminalcommand-line)
 
 ## Frontend (25 buổi)
+https://www.w3schools.com/howto/
 ### HTML (5 buổi)
 #### Buổi 1: Giới thiệu và cấu trúc cơ bản
 1. Giới thiệu về HTML và lịch sử phát triển.
