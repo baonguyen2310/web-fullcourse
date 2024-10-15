@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form action="https://form-test-api.vercel.app/api/auth/login" method="POST">
+        <input type="text" name="username" placeholder="Tên đăng nhập...">
+        <input type="password" name="password" placeholder="Mật khẩu...">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
+
+
+API: https://form-test-api.vercel.app/api/auth/login
+DOCUMENTATION:
+    METHOD: POST
+    BODY:
+        username: string
+    RESPONSE:
+        status: 200
+        message: "Login successfully"
+        data: {"message": "{username} đã đăng nhập thành công"}
