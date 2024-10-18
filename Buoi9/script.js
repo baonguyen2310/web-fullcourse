@@ -133,10 +133,33 @@ const product = {
 }
 
 
-const total = product.price * product.quantity;
-console.log("Tổng tiền: ", total);
-console.log("Tổng tiền: " + total);
-console.log(`Tổng tiền: ${total}`); // ES6
+// const total = product.price * product.quantity;
+// console.log("Tổng tiền: ", total);
+// console.log("Tổng tiền: " + total);
+// console.log(`Tổng tiền: ${total}`); // ES6
+
+
+
+// BÀI TẬP
+
+// Shopee:
+// - Tạo 3 object sản phẩm, mỗi object có các thuộc tính: name, price, quantity
+// - Tạo một giỏ hàng chứa 3 object sản phẩm
+// - Tính tổng tiền của tất cả các sản phẩm trong giỏ hàng
+// - Tính tổng tiền của tất cả các sản phẩm trong giỏ hàng sau khi giảm giá 10%
+// - Tính tổng tiền của tất cả các sản phẩm trong giỏ hàng sau khi giảm giá 10% và có phí ship 10.000đ
+
+// Chatgpt:
+// - Tạo 3 object tin nhắn có các thuộc tính: id, content, createdAt, from, to
+// - Tạo một mảng chứa 3 object tin nhắn
+
+// Portfolio:
+// - Tạo 3 object skill có các thuộc tính: name, description, level
+// - Tạo một mảng skills chứa 3 object skill
+
+
+
+
 
 
 
