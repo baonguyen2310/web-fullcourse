@@ -1,0 +1,11 @@
+.product-name {
+    color: red;
+}
+
+.product-price {
+    color: blue;
+}
+
+.active {
+    background-color: green;
+}
