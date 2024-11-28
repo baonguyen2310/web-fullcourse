@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Widget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Widget container */
+        .contact-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        /* Button styles */
+        .contact-widget a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-widget a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Individual button colors */
+        .contact-widget .zalo {
+            background-color: #0078FF; /* Zalo blue */
+        }
+        .zalo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .contact-widget .messenger {
+            background-color: #0084FF; /* Messenger blue */
+        }
+        .contact-widget .call {
+            background-color: #28a745; /* Call green */
+        }
+        .contact-widget .chat {
+            background-color: #0084FF; /* Call green */
+        }
+        /* Thêm styles mới */
+        .contact-widget {
+            display: none; /* Ẩn widget ban đầu */
+        }
+        
+        .toggle-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #0084FF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-button {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content -->
+    <h1 style="text-align: center; margin-top: 50px;">WELCOME</h1>
+
+    <!-- Toggle Button -->
+    <div class="toggle-button" id="toggleWidget">
+        <i class="fas fa-headset"></i>
+    </div>
+
+    <!-- Contact Widget -->
+    <div class="contact-widget" id="contactWidget">
+        <!-- Zalo Button -->
+        <a href="https://zalo.me/0355016412" target="_blank" class="zalo" title="Chat with us on Zalo">
+            <img src="zalo-icon.webp" />
+        </a>
+        <!-- Facebook Button -->
+        <a href="https://www.facebook.com/profile.php?id=100088036293633" target="_blank" class="messenger" title="Chat with us on Messenger">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <!-- Call Button -->
+        <a href="tel:+84123456789" class="call" title="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <!-- Messenger Button -->
+        <a href="https://m.me/100088036293633" target="_blank" class="messenger" title="Chat with us on Messenger">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+        <!-- Close Button - Moved to bottom -->
+        <a href="#" class="close-button" id="closeWidget" title="Close">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+
+    <!-- Thêm JavaScript -->
+    <script>
+        const toggleButton = document.getElementById('toggleWidget');
+        const contactWidget = document.getElementById('contactWidget');
+        const closeButton = document.getElementById('closeWidget');
+
+        toggleButton.addEventListener('click', function() {
+            contactWidget.style.display = 'flex';
+            toggleButton.style.display = 'none';
+        });
+
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            contactWidget.style.display = 'none';
+            toggleButton.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
