@@ -1,0 +1,169 @@
+USE shopee_suabai
+
+CREATE TABLE User (
+	UserID VARCHAR(20) PRIMARY KEY,
+	UserName VARCHAR(50) NOT NULL,
+	Password VARCHAR(255) NOT NULL,
+	Email VARCHAR(100),
+	Phone VARCHAR(20), 
+	Address TEXT,
+	Gender ENUM('Male', 'Female') NOT NULL,
+	DateOfBirth DATETIME,
+	AvatarURL VARCHAR(255),
+	Status ENUM('Active', 'Inactive', 'Banned') DEFAULT 'Active' NOT NULL,
+	LastLogin DATETIME,
+	CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE User_Role (
+	UserID VARCHAR(20) NOT NULL,
+	RoleID VARCHAR(20) NOT NULL,
+	PRIMARY KEY (UserID, RoleID),
+	FOREIGN KEY (UserID) REFERENCES User(UserID),
+	FOREIGN KEY (RoleID) REFERENCES Role(RoleID)
+)
+
+CREATE TABLE Role (
+	RoleID VARCHAR(20) PRIMARY KEY,
+	RoleName VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE Products (
+	ProductID VARCHAR(20) PRIMARY KEY,
+	CategoryID VARCHAR(20) NOT NULL,
+	ShopID VARCHAR(20) NOT NULL,
+	ProductName VARCHAR(50),
+	ProductCode VARCHAR(50),
+	Description TEXT,
+	Price DECIMAL(10, 3) NOT NULL,
+	Stock INT NOT NULL,
+	Rating DECIMAL(2,1) DEFAULT 0.0,
+	TotalReviews INT DEFAULT 0,
+	Likes INT DEFAULT 0,
+	ThumbnailURL VARCHAR(255),
+	CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Thoi trang > Quan ao > Quan > Quan tay > ...
+-- Comment của comment của comment 
+
+CREATE TABLE Categories (
+	CategoryID VARCHAR(20) PRIMARY KEY,
+	ParentCategoryID VARCHAR(20),
+	CategoryName VARCHAR(50),
+	CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (ParentCategoryID) REFERENCES Categories(CategoryID)
+);
+
+CREATE TABLE Cart (
+    CartID VARCHAR(20) PRIMARY KEY,
+    UserID VARCHAR(20) NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
+
+CREATE TABLE Cart_Detail (
+    CartID VARCHAR(20) NOT NULL,
+    ProductID VARCHAR(20) NOT NULL,
+    Quantity INT NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (CartID, ProductID),
+    FOREIGN KEY (CartID) REFERENCES Cart(CartID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- Lưu ý có hàm ORDER nên là phải để `Order` mà order có nhiều mà nên thêm s thì không cần để ``(backticks)
+
+CREATE TABLE Orders (
+    OrderID VARCHAR(20) PRIMARY KEY,
+    UserID VARCHAR(20) NOT NULL,
+    TotalAmount DECIMAL(10, 3) NOT NULL,
+    Status ENUM('pending', 'paid', 'shipped', 'delivered', 'cancelled') DEFAULT 'pending', -- trạng thái đơn hàng mới học được :)
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Order_Detail (
+    OrderID VARCHAR(20) NOT NULL,
+    ProductID VARCHAR(20) NOT NULL,
+    Quantity INT NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (OrderID, ProductID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+CREATE TABLE Payment (
+    PaymentID VARCHAR(20) PRIMARY KEY,
+    OrderID VARCHAR(20) NOT NULL,
+    Amount DECIMAL(10, 3) NOT NULL,
+    PaymentMethod ENUM('credit_card', 'bank_transfer', 'cash_on_delivery', 'e_wallet') NOT NULL, -- phương thức thanh toán
+    PaymentStatus ENUM('pending', 'completed', 'failed') DEFAULT 'pending', -- trạng thái thanh toán
+    PaymentDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Shipping (
+    ShippingID VARCHAR(20) PRIMARY KEY,
+    OrderID VARCHAR(20) NOT NULL,
+    Address TEXT NOT NULL,
+    ShippingStatus ENUM('pending', 'in_transit', 'delivered', 'returned') DEFAULT 'pending',
+    EstimatedDeliveryDates DATE,
+    ShippingMethod ENUM('Standard', 'Express') DEFAULT 'Standard' NOT NULL,
+    TrackingNumber VARCHAR(50), -- Mã vận đơn
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Review (
+    ReviewID VARCHAR(20) PRIMARY KEY,
+    UserID VARCHAR(20) NOT NULL,
+    ProductID VARCHAR(20) NOT NULL,
+    Rating TINYINT NOT NULL CHECK (Rating BETWEEN 1 AND 5),
+    Comment TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Shops (
+    ShopID VARCHAR(20) PRIMARY KEY,
+    UserID VARCHAR(20) NOT NULL,
+    ShopName VARCHAR(100) NOT NULL,
+    Description TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
+
+CREATE TABLE Wishlists (
+    WishlistID VARCHAR(20) PRIMARY KEY,
+    UserID VARCHAR(20) NOT NULL,
+    ProductID VARCHAR(20) NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Coupon (
+	CouponID VARCHAR(20) PRIMARY KEY,
+	CouponCode VARCHAR(50) NOT NULL,
+	Discount DECIMAL(5,2) NOT NULL,
+	ExpiryDate DATETIME,
+	CouponCount INT,
+	CouponUsed INT,
+	MinTotalAmount DECIMAL(10,3),
+	Status ENUM('Active', 'Inactive', 'Expired') DEFAULT 'Active',
+	CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AuditLog (
+	LogID VARCHAR(20) PRIMARY KEY,
+	UserID VARCHAR(20) NOT NULL,
+	Action TEXT NOT NULL,
+	Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	FOREIGN KEY (UserID) REFERENCES User(UserID)
+)
