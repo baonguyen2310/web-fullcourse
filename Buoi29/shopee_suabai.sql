@@ -48,6 +48,7 @@ CREATE TABLE Products (
 
 -- Thoi trang > Quan ao > Quan > Quan tay > ...
 -- Comment của comment của comment 
+-- nhân viên > quản lý
 
 CREATE TABLE Categories (
 	CategoryID VARCHAR(20) PRIMARY KEY,
