@@ -1,0 +1,8 @@
+- Số nguyên tố
+- Ước
+- Ước chung
+- Ước chung lớn nhất
+- 2 số nguyên tố cùng nhau
+- e bằng mấy
+- mod: chia lấy dư
+- đồng dư modulo
